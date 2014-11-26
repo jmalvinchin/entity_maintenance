@@ -25,4 +25,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'haml-rails', '~> 0.5.3'
   s.add_dependency 'simple_form', '~> 3.1.0.rc2'
   s.add_dependency 'jbuilder', '~> 2.2.5'
+  s.add_dependency 'country_select', '~> 2.1.0'
 end
