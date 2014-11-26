@@ -1,0 +1,9 @@
+- if entity.class == EntityMaintenance::Organization
+  = form.input :contact_person
+= form.input :contact_number
+= form.input :contact_type
+= form.input :entity_id, :as => :hidden
+
+= form.button :submit
+\|
+= link_to 'Cancel', cancel_url

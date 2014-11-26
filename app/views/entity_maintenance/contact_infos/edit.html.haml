@@ -1,0 +1,4 @@
+%h1 Editing Contact Info
+
+= simple_form_for @contact_info, :url => entity_contact_info_path(@entity, @contact_info), :html => { :class => 'form' } do |form|
+  = render 'form', :form => form, :entity => @entity, :cancel_url => entity_path(@entity)

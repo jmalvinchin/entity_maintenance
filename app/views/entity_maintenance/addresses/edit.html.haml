@@ -1,0 +1,4 @@
+%h1 Editing Address
+
+= simple_form_for @address, :url => entity_address_path(@entity, @address), :html => { :class => 'form' } do |form|
+  = render 'form', :form => form, :cancel_url => entity_path(@entity)

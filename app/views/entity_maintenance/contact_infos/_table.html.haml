@@ -1,0 +1,19 @@
+%table
+  %thead
+    %tr
+      - if @entity.class == EntityMaintenance::Organization
+        %th Person
+      %th Number
+      %th Type
+      %th Actions
+  %tbody
+    - entity.contact_infos.each do |contact_info|
+      %tr
+        - if @entity.class == EntityMaintenance::Organization
+          %td= contact_info.contact_person
+        %td= contact_info.contact_number
+        %td= contact_info.contact_type
+        %td
+          = link_to "Edit", edit_entity_contact_info_path(entity, contact_info)
+          \|
+          = link_to 'Destroy', entity_contact_info_path(entity, contact_info), :method => :delete, :data => { :confirm => 'Are you sure?' }

@@ -1,0 +1,14 @@
+%table
+  %thead
+    %tr
+      %th Last Name
+      %th First Name
+      %th Middle Name
+      %th Prefix
+  %tbody
+    - @people.each do |person|
+      %tr
+        %td= link_to person.last_name, entity_path(person)
+        %td= person.first_name
+        %td= person.middle_name
+        %td= person.prefix

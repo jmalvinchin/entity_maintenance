@@ -1,0 +1,8 @@
+%h1 Listing people
+= link_to 'New Person', new_entity_path(:type => EntityMaintenance::Person.to_s)
+
+= render 'people'
+
+%h1 Listing organizations
+= link_to 'New Organization', new_entity_path(:type => EntityMaintenance::Organization.to_s)
+= render 'organizations'

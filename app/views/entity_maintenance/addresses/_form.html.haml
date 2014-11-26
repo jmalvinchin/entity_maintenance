@@ -1,0 +1,11 @@
+= form.input :line_1
+= form.input :line_2
+= form.input :city
+= form.input :province_or_state
+= form.input :country
+= form.input :zipcode
+= form.input :entity_id, :as => :hidden
+
+= form.button :submit
+\|
+= link_to 'Cancel', cancel_url

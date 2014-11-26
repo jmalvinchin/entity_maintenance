@@ -1,0 +1,21 @@
+%table
+  %thead
+    %tr
+      %th Address
+      %th City
+      %th Province Or State
+      %th Country
+      %th Zipcode
+      %th Actions
+  %tbody
+    - entity.addresses.each do |address|
+      %tr
+        %td= address.street_address
+        %td= address.city
+        %td= address.province_or_state
+        %td= address.country
+        %td= address.zipcode
+        %td
+          = link_to "Edit", edit_entity_address_path(entity, address)
+          \|
+          = link_to 'Destroy', entity_address_path(entity, address), :method => :delete, :data => { :confirm => 'Are you sure?' }

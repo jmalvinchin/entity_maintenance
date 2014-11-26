@@ -1,0 +1,10 @@
+%table
+  %thead
+    %tr
+      %th Name
+      %th Industry
+  %tbody
+    - @orgs.each do |org|
+      %tr
+        %td= link_to org.name, entity_path(org)
+        %td= org.industry

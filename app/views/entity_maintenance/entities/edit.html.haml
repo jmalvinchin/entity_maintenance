@@ -1,0 +1,7 @@
+%h1 Editing entity
+
+= simple_form_for @entity, :url => entity_path(@entity), :html => { :class => 'form' } do |form|
+  - if @entity.type == EntityMaintenance::Person.to_s
+    = render 'person_form', :form => form, :cancel_url => entities_path
+  - elsif @entity.type == EntityMaintenance::Organization.to_s
+    = render 'organization_form', :form => form, :cancel_url => entities_path
